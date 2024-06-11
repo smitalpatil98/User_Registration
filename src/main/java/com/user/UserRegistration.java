@@ -6,20 +6,20 @@ import java.util.regex.Matcher;
 
 public class UserRegistration
 {
-    public void validatePassword()
+    public void validateUppercase()
     {
     Scanner sc = new Scanner(System.in);
-    System.out.println("Enter password");
-    String password = sc.nextLine();
-    String regex = "^([a-z]{8,})$";
+    System.out.println("Enter atleast 1 Uppercase");
+    String Uppercase = sc.nextLine();
+    String regex = "^(?=.*[A-Z]).{8,}$";
     Pattern p = Pattern.compile(regex);
-    Matcher m = p.matcher(password);
+    Matcher m = p.matcher(Uppercase);
     boolean b = m.matches();
     System.out.println(b);
     }
     public static void main(String[] args)
     {
         UserRegistration ur = new UserRegistration();
-        ur.validatePassword();
+        ur.validateUppercase();
     }
 }
