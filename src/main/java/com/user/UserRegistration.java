@@ -9,11 +9,11 @@ public class UserRegistration
     public void validateName()
     {
     Scanner sc = new Scanner(System.in);
-    System.out.println("Enter first name");
-    String firstName = sc.nextLine();
+    System.out.println("Enter last name");
+    String lastName = sc.nextLine();
     String regex = "[A-Z][a-z]{4,10}";
     Pattern p = Pattern.compile(regex);
-    Matcher m=p.matcher(firstName);
+    Matcher m = p.matcher(lastName);
     boolean b = m.matches();
     System.out.println(b);
     }
