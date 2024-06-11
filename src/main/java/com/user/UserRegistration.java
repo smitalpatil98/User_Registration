@@ -6,20 +6,20 @@ import java.util.regex.Matcher;
 
 public class UserRegistration
 {
-    public void validateNumber()
+    public void validatePassword()
     {
     Scanner sc = new Scanner(System.in);
-    System.out.println("Enter Mobile Number");
-    String MobileNumber = sc.nextLine();
-    String regex = "^[0-9]{2} [0-9]{10}$";
+    System.out.println("Enter password");
+    String password = sc.nextLine();
+    String regex = "^([a-z]{8,})$";
     Pattern p = Pattern.compile(regex);
-    Matcher m = p.matcher(MobileNumber);
+    Matcher m = p.matcher(password);
     boolean b = m.matches();
     System.out.println(b);
     }
     public static void main(String[] args)
     {
         UserRegistration ur = new UserRegistration();
-        ur.validateNumber();
+        ur.validatePassword();
     }
 }
