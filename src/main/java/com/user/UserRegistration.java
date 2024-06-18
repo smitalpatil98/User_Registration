@@ -13,7 +13,6 @@ public class UserRegistration
     System.out.println("Should exactly one Special Character");
     String Uppercase = sc.nextLine();
     String regex = "^(?=.*[^a-zA-Z0-9])(?!.*[^a-zA-Z0-9].*[^a-zA-Z0-9]).{8,}$";
-    //String regex =  "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
     Pattern p = Pattern.compile(regex);
     Matcher m = p.matcher(Uppercase);
     boolean b = m.matches();
